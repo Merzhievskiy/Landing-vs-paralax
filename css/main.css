@@ -13,6 +13,7 @@
 
 :root {
 	--index: calc(1vw + 1vh);
+
 }
 
 body {
@@ -77,6 +78,7 @@ body {
 	transform: translate3d(0, calc(var(--scrollTop) / 1.6),0);
 	z-index: 0;
 	
+	
 }
 .layer__middle {
 	transform: translate3d(0, calc(var(--scrollTop) / 2.5),0);
@@ -94,16 +96,27 @@ body {
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	--main-article-transform: translate3d(0, calc(var(--scrollTop) / 7),0);
+	will-change: transform;
 }
 .main-article__content {
 	text-align: center;
-	max-width: 400px;
+	max-width: calc(var(--index) * 30);
+	will-change: transform;
 }
 .main-article__title {
 	font-weight: 900;
 	font-size: calc(var(--index) * 1.4);
 	letter-spacing: calc(var(--index) * 0.1);
 	margin-bottom: 25px;
+	transform: var(--main-article-transform);
+	will-change: transform;
+}
+
+.main-article__text{
+	font-size: calc(var(--index) * 0.9);
+	transform: var(--main-article-transform);
+	will-change: transform;
 }
 .copy {
 	position: absolute;
@@ -111,7 +124,4 @@ body {
 	opacity: 0.45;
 	font-size: calc(var(--index) * 0.7);
 	
-}
-.main-article__text{
-	font-size: calc(var(--index) * 0.9);
 }
