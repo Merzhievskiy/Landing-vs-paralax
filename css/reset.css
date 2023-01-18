@@ -37,16 +37,5 @@ html {
 	/* по умолчанию */
 	/* font-size: 16px;  */
 }
-body {
-	line-height: 1;
-	color: #fff;
-	background-color: #333;
-	font-family: "Roboto";
-}
-.wrapper {
-	min-height: 100%;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-}
+
 /* ------------------------------ */
